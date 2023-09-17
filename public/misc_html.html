@@ -31,7 +31,8 @@ This if for testing with iframe resizer
          <h1>This is below the project. </h1>
          <script>
           try {
-            iFrameResize({ log: false }, '#democracylab-groups,#democracylab-project,')
+            iFrameResize({ log: true }, '#democracylab-groups')
+            iFrameResize({ log: true }, '#democracylab-project')
           }
           catch(err){
             console.info("caught error trying to run IFrameResize",err)
