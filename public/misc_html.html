@@ -11,11 +11,6 @@ This if for testing with iframe resizer
      <title>iframe test</title>
    </head>
    <body>
-     <script>
-       window.DLAB_SERVER=window.DLAB_SERVER || "https://democracy-lab-prod-mirror.herokuapp.com/"
-       window.DLAB_GROUP=window.DLAB_GROUP || "1"
-       window.DLAB_PROJECT=window.DLAB_PROJECT || "1"
-     </script>
      <div style="width: calc( 100vw - 4rem); margin-left: auto; margin-right: auto">
          <h1>This is a landing page with Group projects:</h1>
          <style>
@@ -24,14 +19,14 @@ This if for testing with iframe resizer
              min-width: 100%;
            }
          </style>
-         <script src=`${DLAB_SERVER}/static/iframeResizer.min.js`></script>
+         <script src="https://democracy-lab-prod-mirror.herokuapp.com/static/iframeResizer.min.js"></script>
          <iframe id="democracylab-groups"
-             src=`${DLAB_SERVER}/groups/inframe/${DLAB_GROUP}`
+             src="https://democracy-lab-prod-mirror.herokuapp.com/groups/inframe/1"
          ></iframe>
          <h1>This is below the group</h1>
          <h1>This is a project</h1>
          <iframe id="democracylab-project"
-             src=`${DLAB_SERVER}/projects/inframe/${DLAB_PROJECT}`
+             src="https://democracy-lab-prod-mirror.herokuapp.com/projects/inframe/1"
          ></iframe>
          <h1>This is below the project. </h1>
          <script>
