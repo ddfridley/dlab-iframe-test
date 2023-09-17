@@ -19,19 +19,28 @@ This if for testing with iframe resizer
              min-width: 100%;
            }
          </style>
-         <script src="https://democracy-lab-prod-mirror.herokuapp.com/static/iframeResizer.min.js"></script>
+         <script src="https://democracy-lab-dev.herokuapp.com/static/iframeResizer.min.js"></script>
          <iframe id="democracylab-groups"
-             src="https://democracy-lab-prod-mirror.herokuapp.com/groups/inframe/1"
+             src="https://democracy-lab-dev.herokuapp.com/groups/inframe/1"
          ></iframe>
          <h1>This is below the group</h1>
          <h1>This is a project</h1>
          <iframe id="democracylab-project"
-             src="https://democracy-lab-prod-mirror.herokuapp.com/projects/inframe/1"
+             src="https://democracy-lab-dev.herokuapp.com/projects/inframe/1"
          ></iframe>
          <h1>This is below the project. </h1>
          <script>
-             iFrameResize({ log: true }, '#democracylab-groups,#democracylab-project')
-         </script>
+          try {
+            iFrameResize({ log: false }, '#democracylab-groups, #democracylab-project,')
+          }
+          catch(err){
+            console.info("caught error trying to run IFrameResize",err)
+            //const frame=document.getElementById('democracylab-groups')
+            //frame.style.display='none'
+            //const staticList=document.getElementById('static-project-list')
+            //staticList.style.display='block'
+          }
+        </script>
      </div>
    </body>
  </html>
